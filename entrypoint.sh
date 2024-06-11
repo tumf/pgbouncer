@@ -3,7 +3,7 @@
 # Generate PgBouncer configuration file
 cat <<EOF > /etc/pgbouncer/pgbouncer.ini
 [databases]
-* = host=${PGHOST} port=${PGPORT} user=${PGUSER} password=${PGPASSWORD}
+${PGDATABASE} = host=${PGHOST} port=${PGPORT} user=${PGUSER} password=${PGPASSWORD}
 
 [pgbouncer]
 listen_addr = *
