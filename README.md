@@ -1,6 +1,6 @@
 # Handy PgBouncer 
 
-Auto generate configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user from env vars.
+Auto generate [PgBouncer](https://www.pgbouncer.org/) (Lightweight connection pooler for PostgreSQL) configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user from env vars.
 
 
 ```yaml
