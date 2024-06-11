@@ -1,3 +1,6 @@
+
+Handy PgBouncer - auto generate configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user with single database.
+
 ```yaml
 services:
   pgbouncer:
