@@ -1,6 +1,6 @@
 # Handy PgBouncer 
 
-Auto generate configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user with single database from env vars.
+Auto generate configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user from env vars.
 
 
 ```yaml
@@ -26,3 +26,15 @@ services:
       - DB_POSTGRESDB_PASSWORD=${POSTGRES_NON_ROOT_PASSWORD}
     ...
 ```
+
+| Environment Variable | Description                                      | Default   |
+|----------------------|--------------------------------------------------|-----------|
+| PGDATABASE           | The name of the PostgreSQL database to connect to| *         |
+| PGHOST               | The hostname of the PostgreSQL server            | postgres  |
+| PGPORT               | The port number on which the PostgreSQL server is listening | 5432      |
+| PGUSER               | The username for the PostgreSQL database         | postgres  |
+| PGPASSWORD           | The password for the PostgreSQL user             | postgres  |
+| AUTH_TYPE            | The authentication type for PgBouncer            | md5       |
+| POOL_MODE            | The pool mode for PgBouncer                      | session   |
+| MAX_CLIENT_CONN      | The maximum number of client connections allowed | 100       |
+| DEFAULT_POOL_SIZE    | The default pool size                            | 20        |
