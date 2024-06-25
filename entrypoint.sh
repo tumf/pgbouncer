@@ -13,7 +13,6 @@ auth_file = /etc/pgbouncer/userlist.txt
 pool_mode = ${POOL_MODE:-session}
 max_client_conn = ${MAX_CLIENT_CONN:-100}
 default_pool_size = ${DEFAULT_POOL_SIZE:-20}
-log_level = WARNING
 EOF
 
 # Generate userlist file
