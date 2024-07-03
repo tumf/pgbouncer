@@ -16,6 +16,12 @@ services:
       - POOL_MODE=session
       - MAX_CLIENT_CONN=100
       - DEFAULT_POOL_SIZE=20
+    healthcheck:
+      test: ["CMD", "/healthcheck.sh"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
   app:
     ...
     environment:

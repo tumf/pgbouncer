@@ -13,8 +13,8 @@ auth_file = /etc/pgbouncer/userlist.txt
 pool_mode = ${POOL_MODE:-session}
 max_client_conn = ${MAX_CLIENT_CONN:-100}
 default_pool_size = ${DEFAULT_POOL_SIZE:-20}
+unix_socket_dir=/tmp
 EOF
-
 # Generate userlist file
 echo "\"$PGUSER\" \"md5$(echo -n "$PGPASSWORD$PGUSER" | md5sum | awk '{print $1}')\"" > /etc/pgbouncer/userlist.txt
 
