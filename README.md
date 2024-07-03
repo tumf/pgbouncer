@@ -1,7 +1,6 @@
 # Handy PgBouncer 
 
-Auto generate [PgBouncer](https://www.pgbouncer.org/) (Lightweight connection pooler for PostgreSQL) configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt`  for single user from env vars.
-
+Auto generate [PgBouncer](https://www.pgbouncer.org/) (Lightweight connection pooler for PostgreSQL) configuration files `/etc/pgbouncer/pgbouncer.ini` and `/etc/pgbouncer/userlist.txt` for single user from env vars.
 
 ```yaml
 services:
@@ -30,6 +29,9 @@ services:
       - DB_POSTGRESDB_DATABASE=${POSTGRES_DB}
       - DB_POSTGRESDB_USER=${POSTGRES_NON_ROOT_USER}
       - DB_POSTGRESDB_PASSWORD=${POSTGRES_NON_ROOT_PASSWORD}
+    depends_on:
+      pgbouncer:
+        condition: service_healthy
     ...
 ```
 
